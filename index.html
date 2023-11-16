@@ -8,48 +8,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Vite App</title>
+    <title>Splitter</title>
   </head>
-  <body class="flex flex-col h-full font-mono bg-custom-cyan-200 p-4">
-    <div class="flex flex-col justify-center items-center gap-8 mt-6">
+  <body class="flex flex-col h-full font-mono bg-custom-cyan-200 p-4 md:justify-center md:items-center">
+    <div class="flex flex-col max-w-screen-md justify-center items-center gap-8 mt-6">
       <div>
         <img src="./logo.svg" alt="splitter logo" class="block max-w-full object-contain">
       </div>
-      <div class="flex flex-col gap-4 p-6 bg-white rounded-3xl rounded-b-none">
-        <div class="relative">
-          <p class="mb-1">Bill</p>
-          <img class="absolute top-6 bottom-0 left-4 m-auto" src="./icon-dollar.svg" alt="a dollar icon">
-          <input id="bill-input" class="px-4 py-1 text-2xl text-right text-custom-cyan-500 bg-custom-cyan-100 border border-black rounded" type="number" placeholder="0">
-        </div>
-        
-        <div>
-          <p class="mb-4">Select Tip %</p>
-          <div class="grid grid-rows-3 grid-cols-2 gap-4">
-            <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded" type="button">10%</button>
-            <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded" type="button">5%</button>
-            <button class="text-xl text-custom-cyan-500 p-2 bg-custom-cyan rounded" type="button">15%</button>
-            <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded" type="button">25%</button>
-            <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded" type="button">50%</button>
-            <button class="text-xl text-custom-cyan-400 p-2 bg-custom-cyan-100 rounded" type="button">Custom</button>
+      <div class="flex flex-col gap-8 p-8 bg-white rounded-3xl rounded-b-none md:grid md:grid-cols-2 md:rounded-b-3xl">
+        <div class="flex flex-col gap-4">
+          <div class="relative">
+            <p class="mb-1">Bill</p>
+            <img class="absolute top-10 left-4" src="./icon-dollar.svg" alt="a dollar icon">
+            <input class="px-4 py-1 text-2xl text-right text-custom-cyan-500 bg-custom-cyan-100 border-none rounded" type="number" placeholder="0">
+          </div>
+
+          <div>
+            <p class="mb-4">Select Tip %</p>
+            <div class="grid grid-rows-3 grid-cols-2 gap-4 md:grid-cols-3 md:grid-rows-2">
+              <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded" type="button">10%</button>
+              <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded" type="button">5%</button>
+              <button class="text-xl text-custom-cyan-500 p-2 bg-custom-cyan rounded" type="button">15%</button>
+              <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded" type="button">25%</button>
+              <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded" type="button">50%</button>
+              <input class="text-xl text-right text-custom-cyan-400 p-2 bg-custom-cyan-100 rounded" type="number" placeholder="Custom">
+            </div>
+          </div>
+
+          <div class="relative">
+            <p class="mb-1">Number of People</p>
+            <img class="absolute top-10 left-4" src="./icon-person.svg" alt="a person icon">
+            <input class="px-4 py-1 text-2xl text-right text-custom-cyan-500 placeholder-custom-cyan-400 bg-custom-cyan-100 border-none rounded" type="number" placeholder="0">
           </div>
         </div>
 
-        <div class="relative">
-          <p class="mb-1">Number of People</p>
-          <img class="absolute top-6 bottom-0 left-4 m-auto" src="./icon-person.svg" alt="a person icon">
-          <input id="people-input" class="px-4 py-1 text-2xl text-right text-custom-cyan-500 placeholder-custom-cyan-400 bg-custom-cyan-100  border border-black rounded" type="number" placeholder="0">
-        </div>
-
-        <div class="flex flex-col gap-4 p-4 pt-8 bg-custom-cyan-500 rounded-2xl">
-          <div class="flex justify-between">
-            <p class="text-white text-sm">Tip amount<br><span class="text-custom-cyan-300 text-xs">/ person</span></p>
-            <p class="text-custom-cyan text-4xl">$0</p>
+        <div class="flex flex-col gap-4 p-4 pt-8 bg-custom-cyan-500 rounded-2xl md:justify-between md:p-8 md:pt-10">
+          <div class="flex flex-col gap-8">
+            <div class="flex justify-between">
+              <p class="text-white text-sm">Tip amount<br><span class="text-custom-cyan-300 text-xs">/ person</span></p>
+              <p class="text-custom-cyan text-4xl">$0.00</p>
+            </div>
+            <div class="flex justify-between">
+              <p class="text-white text-sm">Total<br><span class="text-custom-cyan-300 text-xs">/ person</span></p>
+              <p class="text-custom-cyan text-4xl">$0.00</p>
+            </div>
           </div>
-          <div class="flex justify-between">
-            <p class="text-white text-sm">Total<br><span class="text-custom-cyan-300 text-xs">/ person</span></p>
-            <p class="text-custom-cyan text-4xl">$0</p>
-          </div>
-          <button class="text-custom-cyan-500 p-2 bg-custom-cyan rounded" type="button">RESET</button>
+          <button class="text-lg text-custom-cyan-500 p-2 bg-custom-cyan rounded" type="button">RESET</button>
         </div>
       </div>
     </div>
