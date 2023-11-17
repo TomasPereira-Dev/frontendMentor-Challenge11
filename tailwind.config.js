@@ -14,6 +14,12 @@ export default {
           300: "hsl(184, 14%, 56%)",
           400: "hsl(186, 14%, 43%)",
           500: "hsl(183, 100%, 15%)"
+        },
+        "custom-btn": {
+          DEFAULT: "hsl(173, 60% ,76%)"
+        },
+        "custom-alert": {
+          DEFAULT: "hsl(6, 75%, 65%)"
         }
       },
       fontFamily: {
