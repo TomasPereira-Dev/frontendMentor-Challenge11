@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="h-full overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/frontendMentor-Challenge11/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    
+    <title>Splitter</title>
+    <script type="module" crossorigin src="/frontendMentor-Challenge11/assets/index-b5cfc86a.js"></script>
+    <link rel="stylesheet" href="/frontendMentor-Challenge11/assets/index-3cf50bbb.css">
+  </head>
+  <body class="flex flex-col h-full p-4 font-mono bg-custom-cyan-200 overflow-x-hidden md:justify-center md:items-center">
+    <div class="flex flex-col max-w-screen-md justify-center items-center gap-8 mt-6">
+      <div>
+        <img src="./logo.svg" alt="splitter logo" class="block max-w-full object-contain">
+      </div>
+      <div class="flex flex-col gap-8 p-8 bg-white rounded-3xl rounded-b-none md:grid md:grid-cols-2 md:rounded-b-3xl">
+        <div class="flex flex-col gap-4">
+          <div class="relative">
+            <p class="mb-1">Bill</p>
+            <img class="absolute top-10 left-4" src="./icon-dollar.svg" alt="a dollar icon">
+            <input class="px-4 py-1 text-2xl text-right text-custom-cyan-500 bg-custom-cyan-100 outline-none border-2 border-transparent rounded focus:border-custom-cyan focus:caret-custom-cyan out-of-range:border-custom-alert out-of-range:focus:border-custom-alert out-of-range:focus:caret-custom-alert" placeholder="0" type="number" min="0" id="bill">
+          </div>
+
+          <div>
+            <p class="mb-4">Select Tip %</p>
+            <div class="grid grid-rows-3 grid-cols-2 gap-4 md:grid-cols-3 md:grid-rows-2">
+              <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded hover:bg-custom-btn hover:text-custom-cyan-500 percent-btn" type="button" data-tip="5">5%</button>
+              <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded hover:bg-custom-btn hover:text-custom-cyan-500 percent-btn" type="button" data-tip="10">10%</button>
+              <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded hover:bg-custom-btn hover:text-custom-cyan-500 percent-btn" type="button" data-tip="15">15%</button>
+              <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded hover:bg-custom-btn hover:text-custom-cyan-500 percent-btn" type="button" data-tip="25">25%</button>
+              <button class="text-xl text-white p-2 bg-custom-cyan-500 rounded hover:bg-custom-btn hover:text-custom-cyan-500 percent-btn" type="button" data-tip="50">50%</button>
+              <input class="text-xl text-right text-custom-cyan-400 p-2 bg-custom-cyan-100 outline-none border-2 border-transparent rounded focus:border-custom-cyan focus:caret-custom-cyan out-of-range:focus:caret-custom-alert out-of-range:border-custom-alert out-of-range:focus:border-custom-alert" placeholder="Custom" type="number" min="0" id="custom-tip">
+            </div>
+          </div>
+
+          <div class="relative">
+            <p class="relative w-full mb-1 after:absolute after:hidden after:right-0 after:content-['Can\'t_be_zero'] after:text-custom-alert" id="number-of-people-title">Number of People</p>
+            <img class="absolute top-10 left-4" src="./icon-person.svg" alt="a person icon">
+            <input class="px-4 py-1 text-2xl text-right text-custom-cyan-500 placeholder-custom-cyan-400 bg-custom-cyan-100 outline-none border-2 border-transparent rounded focus:border-custom-cyan focus:caret-custom-cyan out-of-range:focus:caret-custom-alert out-of-range:border-custom-alert out-of-range:focus:border-custom-alert" placeholder="0" type="number" min="1" id="number-of-people-input">
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 p-4 pt-8 bg-custom-cyan-500 rounded-2xl md:justify-between md:p-8 md:pt-10">
+          <div class="flex flex-col gap-8">
+            <div class="flex justify-between">
+              <p class="text-white text-sm">Tip amount<br><span class="text-custom-cyan-300 text-xs">/ person</span></p>
+              <p class="text-custom-cyan text-4xl" id="tip-amount">$0.00</p>
+            </div>
+            <div class="flex justify-between">
+              <p class="text-white text-sm">Total<br><span class="text-custom-cyan-300 text-xs">/ person</span></p>
+              <p class="text-custom-cyan text-4xl" id="total-amount">$0.00</p>
+            </div>
+          </div>
+          <button class="text-lg text-custom-cyan-500 p-2 bg-custom-cyan rounded hover:bg-custom-btn" id="reset-btn" type="button">RESET</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  
+</html>
