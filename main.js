@@ -12,13 +12,9 @@ let totalBill = null;
 let billPlusTip = null;
 let numberOfPeopleValue = null;
 
-
-
-
 const divideBill = (billValue, numberOfPeopleValue) => {
     totalBill = (billValue / numberOfPeopleValue).toFixed(2);
-    totalAmountText.innerHTML = `$${totalBill}`; //when testing with vitest, if something changes the DOM
-                                                   // while the test runs it will see it as an error  
+    totalAmountText.innerText = `$${totalBill}`;
     if(billValue <= 0 || numberOfPeopleValue <= 0){
         throw Error("The number of people or the bill value can't be zero or less")
     }
@@ -66,8 +62,13 @@ document.addEventListener("DOMContentLoaded", () => { //it's needed for vitest t
             tipAmountText.innerText = `$${billPlusTip}`;
         }
     })
+
+    resetBtn.addEventListener("click", () => {
+        customTipInput.value = null;
+        billInput.value = null;
+        numberOfPeopleInput.value = null;
+        tipAmountText.innerText = `$0.00`;
+        totalAmountText.innerText = `$0.00`; 
+    })
 })
-
-
-
 export default divideBill;
